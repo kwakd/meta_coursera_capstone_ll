@@ -1,12 +1,8 @@
-import logo from '../img/logo.png';
-
 import Nav from './Nav';
 
-function Header()
-{
+const Header = () =>{
     return (
         <header>
-            <img src={logo} alt="Little Lemon Logo" />
             <Nav />
         </header>
     );
