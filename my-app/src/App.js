@@ -6,20 +6,25 @@ import{
 import './App.css';
 
 import Header from './components/Header';
+import Main from './components/Main';
 import Footer from './components/Footer';
 
 import Home from './pages/Home';
-import Reservations from './pages/Reservations';
+import ConfirmedBooking from './pages/ConfirmedBooking';
+import Bookings from './pages/Bookings';
 
 const App = () => {
   return (
     <>
       <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/reservations" element={<Reservations />} />
-      </Routes>
+      <Main>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/reservations" element={<Bookings/>} />
+          <Route path="/reservaton-confirmation" element={<ConfirmedBooking/>} />
+        </Routes>
+      </Main>
 
       <Footer />
     </>
