@@ -1,22 +1,29 @@
-import restaurantFood from '../img/restaurant-food.jpg';
+import { Link } from 'react-router-dom';
+
+import './Hero.css';
+import restaurantFoodImage from '../img/restaurant-food.jpg';
 
 const Hero = () => {
     return (
-        <div className="hero">
+        <section className="hero">
             <div className="container-grid">
-                <div className="hero-left">
+                <div className="hero-information">
                     <h1>Little Lemon</h1>
                     <h2>Chicago</h2>
                     <p>
                         We are a family owned Mediterranean restaurant, focused on traditional recipes.
                     </p>
-                    <a href="/">Reserve a table</a>
+                    <Link className="button-primary" to="/bookings">
+                        Reserve a table
+                    </Link>
                 </div>
-                <div className="hero-right">
-                    <img src={restaurantFood} alt="Restaurant food" />
-                </div>
+                <img 
+                    className="hero-image" 
+                    src={restaurantFoodImage} 
+                    alt="Restaurant food" 
+                />
             </div>
-        </div>
+        </section>
     );
 };
 
